@@ -1,0 +1,440 @@
+/* =====================
+    *universal
+===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Exo', sans-serif;
+    background: #333;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: none;     
+    background: none;   
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 5px;
+}
+  
+.col {
+    padding: 1em;
+    color: #333;
+    width: 50%;
+    height: 180px;
+}
+
+.col h2 {
+    margin-bottom: 0.5em;
+
+}
+
+.col-6 {
+    width: 50%;
+    padding: 1em;
+}
+
+.col p {
+    margin: 0 0 0.5em 0;
+}
+
+
+.army-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+/* =====================
+    *sidebar style
+===================== */
+
+.army-sidebar {
+    background: #111;
+    width: 70px;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.icon {
+    height: 100vh;
+    background: #ddd;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1003;
+}
+
+.icon-menu {
+    height: 350px;
+    width: 70px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button {
+    border: none;
+    background: none;
+    border-radius: 50%;
+}
+
+.icon li {
+    list-style-type: none;
+}
+
+.icon img {
+    width: 50px;
+    border-radius: 50%;
+    transition: 500ms all ease-in-out;
+}
+
+.icon img:hover {
+    transform: scale(1.2) rotate(360deg);
+    box-shadow: 0 0 10px #111;
+}
+
+.icon:hover ~ .text-icon {
+    margin-left: 0;
+}
+
+.text-icon {
+    position: fixed;
+    width: 200px;   
+    background: #222;
+    color: white;
+    height: 100vh;
+    left: 70px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -300px;
+    transition: 500ms;
+    z-index: 1002;
+}
+
+.icon-text {
+    list-style-type: none;
+    text-transform: uppercase;
+    height: 350px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.icon-text li {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+/* =====================
+    *main style
+===================== */
+
+.army-content {
+    background: url(../assets/background/army.jpg),rgba(46, 46, 46, 0.7);
+    background-blend-mode: multiply;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: 2.5em 2em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* =====================
+    *home style
+===================== */
+
+.home {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2em;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* left: 70px; */
+}
+
+.home-inner {
+    position: relative;
+    margin: auto;
+    display: flex;
+    width: 90vw;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-inner h1, .home-inner h2, .home-inner h3 {
+    margin-bottom: 0.5em;
+    font-weight: 300;
+}
+
+.home-inner h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.btn {
+    background: #444;
+    border-radius: 5px;
+    color: white;
+    width: 180px;
+    height: 50px;
+    /* border: 2px solid #fff; */
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0.6em 0;
+    transition: 500ms;
+}
+
+.btn:hover {
+    background: #222;
+}
+
+/* =====================
+    *bio style
+===================== */
+
+.bio {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2em;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* left: 70px; */
+}
+
+.bio-inner {
+    position: relative;
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-inner img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.bio-info {
+    display: flex;
+    background: white;
+    width: 50%;
+    height: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.bio-inner h1 {
+    margin: 0.8em 0;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/* =====================
+    *skills style
+===================== */
+
+
+.skills {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2em;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* left: 70px; */
+}
+
+.skills-inner {
+    position: relative;
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-info {
+    display: flex;
+    width: 90%;
+    height: auto;
+    flex-direction: row;
+}
+
+.skills-inner h1 {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.skill-name {
+    background: whitesmoke;
+    margin: 0 0 0.5em 0;
+    color: #333;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    color: white;
+    padding: 0.5em;
+    border-radius: 50px;
+}
+
+.skill p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.html {
+    background: #222;
+    width: 95%;
+}
+
+.css {
+    background: #222;
+    width: 90%;
+}
+
+.bootstrap {
+    background: #222;
+    width: 60%;
+}
+
+.photoshop {
+    background: #222;
+    width: 70%;
+}
+
+.jquery {
+    background: #222;
+    width: 20%;
+}
+
+.javascript {
+    background: #222;
+    width: 30%;
+}
+
+/* =====================
+    *skills style
+===================== */
+
+
+.about {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2em;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* left: 70px; */
+}
+
+.about-inner {
+    position: relative;
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-inner h1 {
+    margin: 0.8em 0;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.about-inner h2 {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.about-inner img {
+    width: 200px;
+}
+
+.socmed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 50%;
+    padding: 1em;
+}
+
+.socmed a img {
+    width: 50px;
+    transition: 500ms;
+}
+
+.socmed a img:hover {
+    transform: scale(1.2) rotate(45deg);
+}
